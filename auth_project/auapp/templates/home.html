@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<script src = "{% static 'js/j1.js' %}"></script>
+<h1>Welcome {{user.username}}</h1>
+<h1>Grade finder App</h1>
+
+<form onsubmit = "return check()">
+<input type ="number" placeholder="Enter marks(0-100)" step="any" name = "marks" id="id_marks" required/>
+<br><br>
+<input type = "submit" value="Find Grade"/>
+</form>
+<h2 id="msg"> {{ msg }} </h2>
+{% endblock %}
